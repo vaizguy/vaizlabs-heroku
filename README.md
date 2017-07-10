@@ -2,7 +2,7 @@
 
 Welcome to the official repository for the vaizlabs homepage.
 
-This project is powered by [Django 1.8.1](http://www.djangoproject.com) and [OpenShift v3](https://github.com/openshift/origin) and is a derivation of the [openshift/django-ex](https://github.com/openshift/django-ex) repository. 
+This project is powered by [Django 1.11.1](http://www.djangoproject.com) and [Heroku](www.heroku.com).
 
 ## License
 
