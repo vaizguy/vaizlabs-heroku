@@ -7,11 +7,18 @@ Created on Nov 26, 2012
 import datetime
 import subprocess
 
-def get_git_revision_hash():
-    return subprocess.check_output(['git', 'rev-parse', 'HEAD'])
+REPO = 'https://github.com/vaizguy/vaizlabs-heroku.git'
 
-def get_git_revision_short_hash():
-    return subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD'])
+def get_git_revision_hash(repo):
+    #git ls-remote -h https://github.com/vaizguy/vaizlabs-heroku.git
+    rev_info = subprocess.check_output(['git', 'ls-remote', '-h', repo])
+    return rev_info[:40]
+     
+def get_git_revision_short_hash(repo):
+    #git ls-remote -h https://github.com/vaizguy/vaizlabs-heroku.git    
+    rev_info = subprocess.check_output(['git', 'ls-remote', '-h', repo])
+    return rev_info[:8]
+
 
 def home_static(request):
     """A context processor that provides static site attributes
@@ -42,6 +49,6 @@ def home_static(request):
     'MY_IRC_CHANNEL_INFO' : "#vaizlabs@irc.freenode.net",
     'SHOW_IRC_CHANNEL' : True,
     'IRC_CHANNEL_LOCKED' : True,
-    'GIT_REV' : get_git_revision_short_hash(),
-    'GIT_REV_FULL' : get_git_revision_hash()
+    'GIT_REV' : get_git_revision_short_hash(REPO),
+    'GIT_REV_FULL' : get_git_revision_hash(REPO)
     }
