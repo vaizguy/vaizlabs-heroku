@@ -1,0 +1,146 @@
+
+/*
+ * Navigation section CSS
+ */
+
+ul#list-nav {
+  list-style:none;
+  margin:20px;
+  padding:0;
+  width:525px
+}
+
+ul#list-nav li {
+  display:inline
+}
+
+ul#list-nav li a {
+  text-decoration:none;
+  padding:5px 0;
+  width:100px;
+  background:#30302F;
+  color:#eee;
+  float:left;
+  text-align:center;
+  border-left:1px solid #fff;
+}
+
+ul#list-nav li a:hover {
+  background:#6E6E6D;
+  color:#000
+}
+
+/*
+
+Temporarily not used.
+
+#navigate {
+  margin-left    : 0px auto;
+  margin-right   : 22px;
+  margin-bottom  : 22px;
+  padding-bottom : 10px;
+	padding-left   : 32px;
+	padding-top    : 10px;
+	background     : #000 url("/static/img/title_banner.png");
+	background-size: 100%;
+  background-position: right;
+  background-repeat:no-repeat;
+  height         : 58px;
+	border-radius  : 6px;
+  color          : #FFF;
+}
+
+*/
+/*
+ * Main section CSS
+ */
+
+#main {
+  margin-left    : 22px;
+  margin-right   : 22px;
+  padding-bottom : 5px;
+}
+
+/*
+ * Blog section CSS
+ */
+
+#blog {
+  margin-left    : 22px;
+  margin-right   : 22px;
+  padding-bottom : 5px;
+}
+
+/*
+ * Contact section CSS
+ */
+
+#contact_us {
+  margin-left    : 22px;
+  margin-right   : 22px;
+  padding-bottom : 5px;
+}
+/*
+ * Header section CSS
+ */
+
+@font-face {
+	font-family: future_brake;
+	src: url('/static/fonts/future_brake.ttf');
+}
+
+header {
+	margin         : 0px auto;
+	padding        : 10px;
+	background     : #FFF none repeat-x;
+	background-size: 100%;
+	border-radius  : 6px;
+  font-family    : future_brake;
+  font-size      : small;
+}
+
+/* Link */
+
+a:link {
+    color:#30302F;
+}
+
+a:hover {
+    background-color:#424242;
+    color:#fafafa;
+}
+
+a:visited {
+    text-decoration:none;
+}
+
+/* Manifesto Style Classes*/
+.manifesto-header {
+    display: inline;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.manifesto-bullets {
+    font-size: 16px;
+}
+
+/* Javascript blocked banner style */
+div#javascript_blocked p#jscript_blocked_banner {
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    margin: 0px;
+    width: 100%;
+    color: #ffffff;
+    background-color: #ff0000;
+    padding-left: 22px;
+}
+
+#container {
+    height: 100%;
+}
+
+body > #container { height: auto; min-height: 100%; }
+
+#content { padding-bottom: 20px; }

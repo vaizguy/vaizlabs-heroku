@@ -1,0 +1,16 @@
+
+/*
+ * Footer section CSS
+ */
+
+footer {
+  padding-left   : 22px; 
+	background     : #545454 None repeat-x;
+  color          : #000000;
+	background-size: 100%;
+  position       : fixed;
+  bottom         : 0;
+  width          : 100%;
+  height         : 20px;  
+}
+

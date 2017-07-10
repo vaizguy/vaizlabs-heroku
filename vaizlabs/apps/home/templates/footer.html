@@ -1,0 +1,8 @@
+{% block footer %}
+{% if request.user_agent.is_mobile %}
+<b>vaizlabs&trade; | 2014-17 | <a href='https://www.openshift.com'>OpenShift</a> | <a href='https://www.djangoproject.com/'>Django</a></b>
+{% else %}
+<b>vaizlabs&trade; | 2014-17 | All Rights Reserved | Powered by <a href='https://www.openshift.com'>OpenShift</a> & <a href='https://www.djangoproject.com/'>Django</a> | <a href='http://www.github.com/vaizguy/vaizlabs/commit/{{ GIT_REV_FULL }}'>Git revision: {{ GIT_REV }}</a> 
+  {% if IP_ADDRESS != None %}| {{ IP_ADDRESS }} {% endif %}</b>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+<pre>
+<img src="/static/img/email.gif"  width="64" height="64" alt="Email me @"><a href='mailto:{{ EMAIL_LINK }}'>{{ EMAIL_TITLE }}</a>
+{% if SHOW_PGP %}
+<img src="/static/img/lock.gif"  width="64" height="64" alt="PGP Key fingerprint."><u>PGP Fingerprint</u> [{{ MY_PGP_KEY_FP }}]
+{% endif %}
+<img src="/static/img/twitter.gif"  width="64" height="64" alt="Tweet me @"><a href={{ TWITTER_LINK }}>{{ TWITTER_TITLE }}</a>
+{% if SHOW_IRC_CHANNEL %}
+<img src="/static/img/speechbubble.gif"  width="64" height="64" alt="IRC, {{ MY_IRC_CHANNEL_INFO }}"><u>{{ MY_IRC_CHANNEL_INFO }}</u> {% if IRC_CHANNEL_LOCKED %}&#128274; | &#128683;{% endif %}
+{% endif %}
+</pre>
