@@ -2,7 +2,7 @@
 
 Welcome to the official repository for the vaizlabs homepage.
 
-This project is powered by [Django 1.11.1](http://www.djangoproject.com) and [Heroku](www.heroku.com).
+This project is powered by [Django 1.11.1](http://www.djangoproject.com) and [Heroku](http://www.heroku.com).
 
 ## License
 
