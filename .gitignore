@@ -66,3 +66,6 @@ target/
 
 # Gvim
 *.sw[po]
+
+# Secret settings
+secrets.sh
