@@ -65,7 +65,7 @@ docs/_build/
 target/
 
 # Gvim
-*.sw[po]
+.*.sw[po]
 
 # Secret settings
 secrets.sh
