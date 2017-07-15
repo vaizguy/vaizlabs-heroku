@@ -4,10 +4,10 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    {% load staticfiles %}
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        {% load staticfiles %}
         <title>{{ HOME_TITLE }}</title>
         <meta name="description" content="vaizlabs project host.">
         <meta name="viewport" content="width=device-width">
@@ -23,20 +23,19 @@
         <link rel="stylesheet" href="{% static 'css/footer.css' %}">
         <script src="{% static 'js/vendor/modernizr-2.6.2.min.js' %}"></script>
 
-        <!-- If JS blocked, got this great idea from Yan's blog https://zyan.scripts.mit.edu/blog/ -->
-        <noscript>
-            <div id="javascript_blocked">
-                 <p id="jscript_blocked_banner">Hello friend! Your browser blocked all Javascript, Good Job! All should be fine, however if anything seems broke do yell!</p>
-                 </br>
-            </div>
-        </noscript>
-
     </head>
     <body>
         <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser.
         Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        <!-- If JS blocked, got this great idea from Yan's blog https://zyan.scripts.mit.edu/blog/ -->
+        <noscript>
+            <div id="jscript_blckd">
+                 <p id="jscript_blckd_banner">Hello friend! Your browser blocked all Javascript, Good Job! All should be fine, however if anything seems broke do yell!</p>
+                 <br>
+            </div>
+        </noscript>
 
         <!-- site or application content here -->
 
@@ -53,13 +52,11 @@
 
         <nav>
         <!-- Navigation -->
-        <section id="navigate">
             <ul id="list-nav">
                 <li><a href='/home'>{{ SECTION_HOME }}</a></li>
                 <li><a href='/blog'>{{ SECTION_BLOG }}</a></li>
                 <li><a href='/contact'>{{ SECTION_CONTACT }}</a></li>
             </ul>
-        </section>
         </nav>
 
         <br>
