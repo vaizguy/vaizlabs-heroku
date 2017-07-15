@@ -32,7 +32,7 @@ ul#list-nav li a:hover {
 
 /*
 
-Temporarily not used.
+Not used!
 
 #navigate {
   margin-left    : 0px auto;
@@ -126,7 +126,7 @@ a:visited {
 }
 
 /* Javascript blocked banner style */
-div#javascript_blocked p#jscript_blocked_banner {
+div#jscript_blckd p#jscript_blckd_banner {
     position: absolute; 
     top: 0; 
     left: 0;
