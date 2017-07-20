@@ -43,8 +43,11 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    # Django imagekit
     'imagekit',
+    # uploadcare 
     'pyuploadcare.dj',
+    # Vaizlabs apps
     'vaizlabs.apps.home',
     'vaizlabs.apps.blog',
 ]
@@ -149,7 +152,5 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'mediafiles')
 UPLOADCARE = {
         'pub_key' : os.environ['UPLOADCARE_API_PUB_KEY'],
         'secret'  : os.environ['UPLOADCARE_API_SECRET'],
-        'widget_version' : '2.8.1',
-        'widget_build' : 'min', ## No JQuery
 }
 
