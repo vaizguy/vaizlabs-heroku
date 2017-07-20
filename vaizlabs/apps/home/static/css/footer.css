@@ -3,6 +3,19 @@
  * Footer section CSS
  */
 
+p#footer span:not(:first-child){
+    border-left:1px solid #000;
+    padding-left:10px;
+}
+
+p#footer{
+    margin:0;
+}
+
+span{
+    padding-left:0px;
+}
+
 footer {
   padding-left   : 22px; 
 	background     : #545454 None repeat-x;
@@ -12,5 +25,12 @@ footer {
   bottom         : 0;
   width          : 100%;
   height         : 20px;  
+}
+
+
+img#html5_logo {
+    padding-bottom: 5px;
+    width: 14px;
+    height: 14px;
 }
 
