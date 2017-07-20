@@ -1,7 +1,7 @@
 
 from base import *
 
-DEBUG = False
+DEBUG = os.environ['DEBUG']
 
 # Enable security for website
 # Force HTTPS
