@@ -43,7 +43,10 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'imagekit',
+    'pyuploadcare.dj',
     'vaizlabs.apps.home',
+    'vaizlabs.apps.blog',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +66,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'apps/home/templates')            
+            os.path.join(BASE_DIR, 'apps/home/templates'),
+            os.path.join(BASE_DIR, 'apps/blog/templates')                        
             ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -140,3 +144,12 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Media files path
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'mediafiles')
+
+# Uploadcare public key and private key
+UPLOADCARE = {
+        'pub_key' : os.environ['UPLOADCARE_API_PUB_KEY'],
+        'secret'  : os.environ['UPLOADCARE_API_SECRET'],
+        'widget_version' : '2.8.1',
+        'widget_build' : 'min', ## No JQuery
+}
+

@@ -11,10 +11,10 @@ from django.core.urlresolvers import reverse
 #from openshift.apps.home.models import *
 
 ##-----------------------------------------------------------------##  
-## Views for vaizlabs
+## Views for home
 ##-----------------------------------------------------------------##  
 
-## Index page. Main gateway for vaizlabs
+## Index page used as main gateway
 ##-----------------------------------------------------------------##  
 def home(request):
 
@@ -22,33 +22,6 @@ def home(request):
         request,
         'index.html',
         {'SECTION_HOME_ACTIVE': True},
-    )
-
-## Blog
-##-----------------------------------------------------------------##  
-def blog(request):
-
-    #posts = Post.objects.all().order_by("-created")
-    posts = []
-    #paginator = Paginator(posts, 5)
-
-    #try:
-    #    page = int(request.GET.get("page", '1'))
-    #except ValueError:
-    #    print 'Could not get page 1 of blog.'
-    #    page = 1
-
-    #try:
-    #    posts = paginator.page(page)
-    #except (InvalidPage, EmptyPage):
-    #    print 'Received invalid or empty page.'
-    #    posts = paginator.page(paginator.num_pages)
-
-    return render(
-        request,
-        'index.html',
-        #dict(SECTION_BLOG_ACTIVE=True, posts=posts, user=request.user),
-        dict(SECTION_BLOG_ACTIVE=True, posts=posts, user=request.user),
     )
 
 ## Contacts page.
