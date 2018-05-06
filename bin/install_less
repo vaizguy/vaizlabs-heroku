@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
+npm config set strict-ssl false
 npm install -g less
