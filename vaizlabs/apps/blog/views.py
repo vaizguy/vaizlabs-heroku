@@ -35,13 +35,13 @@ def blog(request):
     try:
         page = int(request.GET.get("page", '1'))
     except ValueError:
-        print 'Could not get page 1 of blog.'
+        logger.error('Could not get page 1 of blog.')
         page = 1
 
     try:
         posts = paginator.page(page)
     except (InvalidPage, EmptyPage):
-        print 'Received invalid or empty page.'
+        logger.exception('Received invalid or empty page.')
         posts = paginator.page(paginator.num_pages)
 
     return render(
@@ -53,6 +53,10 @@ def blog(request):
             user=request.user,
             ),
     )
+
+@dj_register.assignment_tag
+def is_gallery_empty(post):
+    return not post.photos.all()
 
 @dj_register.simple_tag
 def img_placeholder_url(post):

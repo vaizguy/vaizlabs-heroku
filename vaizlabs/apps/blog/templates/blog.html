@@ -6,21 +6,26 @@
         <div id="content">
             <!-- Posts  -->
                 {% for post in posts %}
+                <hr>
                     <div class="title" style="font-weight:bold">{{ post.title }}</div>
                         <div class="time">{{ post.created }}</div>
                         <div class="content"><p>{{ post.content|escape|safe }}</p></div>
+                        {% is_gallery_empty post as is_gallery_empty_flag %}
+                        {% if is_gallery_empty_flag == False %}
                         <div class="gallery">
                             <figure style="height:460px;">
-                                <img src="{% img_placeholder_url post=post %}" title="{% img_placeholder_title post=post %}" alt="{% img_placeholder_title post=post %}" id="image" width="800" height="450"/>
+                                <img src="{% img_placeholder_url post=post %}" title="{% img_placeholder_title post=post %}" alt="{% img_placeholder_title post=post %}" id="gallery_{{ post.id }}" width="800" height="450"/>
                                 <figcaption>{% img_placeholder_title post=post %}</figcaption>
                             </figure>    
 
                             <div class="thumbs">
                                     {% for photo in post.photos.all %}
-                                        <img src="{{ photo.image.cdn_url }}-/resize/100x100/" name="{{ photo.image.cdn_url }}" alt="{{ photo.image.title }}" width="100" height="100" onclick="focusOnImage(this.name, this.alt);" title="{{ photo.image.title }}" style="border:4px solid black"/>
+                                    <img src="{{ photo.image.cdn_url }}-/resize/100x100/" id="thumbs_{{ post.id }}_{{ photo.id}}" name="{{ photo.image.cdn_url }}" alt="{{ photo.image.title }}" width="100" height="100" onclick="focusOnImage({{ post.id }}, this.name, this.alt);" title="{{ photo.image.title }}" style="border:4px solid black"/>
                                     {% endfor %}
-                            </div>                               
+                            </div>
                         </div>
+                        {% endif %}
+                <br>               
                 {% endfor %}
         
             <!-- Next/Prev page links  -->

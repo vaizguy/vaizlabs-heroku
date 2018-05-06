@@ -9,7 +9,8 @@ from imagekit.processors import ResizeToFit
 from pyuploadcare.dj.models import ImageField
 
 class PostPhoto(models.Model):
-    title     = models.CharField(max_length=200)
+    id = models.AutoField(primary_key=True)    
+    title = models.CharField(max_length=200)
 #    image     = ProcessedImageField(
 #            upload_to="blog/post_pics", 
 #            null=False, 

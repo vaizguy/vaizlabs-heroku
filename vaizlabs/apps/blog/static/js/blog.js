@@ -1,5 +1,5 @@
-function focusOnImage(src, txt) {
-    document.getElementById('image').src = src;
-    document.getElementById('image').alt = txt;
+function focusOnImage(id, src, txt) {
+    document.getElementById('gallery_'+id).src = src;
+    document.getElementById('gallery_'+id).alt = txt;
 }
 
