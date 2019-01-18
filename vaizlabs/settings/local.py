@@ -1,5 +1,5 @@
 
-from base import *
+from vaizlabs.settings.base import *
 
 DEBUG = True
 

@@ -11,6 +11,8 @@ class PostPhotoInline(admin.TabularInline):
 
 
 class PostAdmin(admin.ModelAdmin):
+    model = Post
+    list_display = ["title", "created", "modified", "user_id"]
     inlines = [PostPhotoInline,]
     search_fields = ["title"]
 
