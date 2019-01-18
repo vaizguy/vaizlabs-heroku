@@ -9,7 +9,7 @@ idna==2.5
 olefile==0.44
 pilkit==2.0
 Pillow==4.2.1
-psycopg2-binary==2.7.1
+psycopg2-binary==2.7.6.1
 python-dateutil==2.6.1
 pytz==2017.2
 pyuploadcare==2.2.1
